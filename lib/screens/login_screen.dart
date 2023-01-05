@@ -20,45 +20,52 @@ class LoginScreen extends StatelessWidget {
         padding: EdgeInsets.symmetric(horizontal: 16.w),
         child: Center(
           child: SingleChildScrollView(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Image.asset(
-                  AppString.loginImagePath,
-                  height: 100.h,
-                ),
-                AppSizedBox.sizedBox30,
-                Text(AppString.headerText.toUpperCase(),
-                    style: GoogleFonts.bebasNeue(
+            child: Center(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Image.asset(
+                    AppString.loginImagePath,
+                    height: 100.h,
+                  ),
+                  AppSizedBox.sizedBox30,
+                  Text(AppString.headerText.toUpperCase(),
+                      maxLines: 1,
+                      textAlign: TextAlign.center,
+                      style: GoogleFonts.bebasNeue(
                         color: AppColor.blackColor,
-                        fontSize: 52.sp,
-                        fontWeight: FontWeight.bold)),
-                Text(
-                  AppString.welcomeMessageText,
-                  style: customTextStyle(size: 18.sp),
-                ),
-                AppSizedBox.sizedBox30,
-                const CustomTextFeild(hintText: AppString.emailHintText),
-                AppSizedBox.sizedBox20,
-                const CustomTextFeild(
-                    hintText: AppString.passwoedHintText, isHide: true),
-                AppSizedBox.sizedBox20,
-                const AppSignInButton(labelText: AppString.labelButtonText),
-                AppSizedBox.sizedBox20,
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text(
-                      AppString.lastRowPartOneText,
-                      style: customTextStyle(),
-                    ),
-                    Text(
-                      AppString.lastRowPartTwoText,
-                      style: customTextStyle(color: AppColor.blueColor),
-                    ),
-                  ],
-                )
-              ],
+                        fontSize: 30.sp,
+                        fontWeight: FontWeight.w700,
+                      )),
+                  AppSizedBox.sizedBox10,
+                  Text(
+                    AppString.welcomeMessageText,
+                    textAlign: TextAlign.center,
+                    style: customTextStyle(),
+                  ),
+                  AppSizedBox.sizedBox30,
+                  const CustomTextFeild(hintText: AppString.emailHintText),
+                  AppSizedBox.sizedBox20,
+                  const CustomTextFeild(
+                      hintText: AppString.passwoedHintText, isHide: true),
+                  AppSizedBox.sizedBox20,
+                  const AppSignInButton(labelText: AppString.labelButtonText),
+                  AppSizedBox.sizedBox20,
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        AppString.lastRowPartOneText,
+                        style: customTextStyle(),
+                      ),
+                      Text(
+                        AppString.lastRowPartTwoText,
+                        style: customTextStyle(color: AppColor.blueColor),
+                      ),
+                    ],
+                  )
+                ],
+              ),
             ),
           ),
         ),

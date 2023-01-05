@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 // vertical sized box 
 class AppSizedBox {
+    static final  sizedBox10 = SizedBox(
+    height: 10.h,
+  );
   static final  sizedBox20 = SizedBox(
     height: 20.h,
   );
